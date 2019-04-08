@@ -1,1 +1,1 @@
-# application-frameworks-hackathon
+# Application Frameworks Hackathon
