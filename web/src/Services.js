@@ -1,7 +1,11 @@
 const baseUrl = "http://localhost:3001"
 
-export function login(url, body) {
-    return callPost(baseUrl + url, body);
+export function login(body) {
+    return callPost(baseUrl + '/login', body);
+}
+
+export function register(body) {
+    return callPost(baseUrl + '/register', body);
 }
 
 // const callGet = (url) => {
@@ -12,7 +16,7 @@ const callPost = (url, body) => {
     return fetch(url, {
         method: 'POST',
         body: JSON.stringify(body),
-        headers: {"Content-Type": "application/json"}
+        headers: { "Content-Type": "application/json" }
     }).then(handleres);
 }
 
@@ -21,7 +25,7 @@ const handleres = (res) => {
         return res.json();
     }
     else {
-        return Promise.reject(new Error("res fail"));
-        //console.log("res failed");
+        throw new Error(res.status + " : " + res.statusText);
+        //return Promise.reject("new Error(res fail)");
     }
 }

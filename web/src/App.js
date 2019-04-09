@@ -2,7 +2,6 @@ import React, { Component, Suspense } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'react-toastify/dist/ReactToastify.css'
 import './App.css'
-// import { hello, post } from "./actions/services";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify';
 
@@ -11,6 +10,7 @@ import Home from './components/Home'
 import About from './components/About'
 import Contact from './components/Contact'
 import Login from './components/Login'
+import Register from './components/Register'
 
 class App extends Component {
   constructor(props, context) {
@@ -18,16 +18,20 @@ class App extends Component {
 
     this.state = {
       showLogin: false,
+      showRegister: false,
       username: ""
+    }
+    this.baseState = this.state
+  }
+
+  handleChange = obj => {
+    if (obj instanceof Object) {
+      this.setState({ ...obj })
     }
   }
 
-  componentWillMount() {
-    // hello("http://localhost:4567/hello")
-    //   .then(res => this.setState({ data: res }));
-
-    // post("http://localhost:4567/post", { a: 10, b: 100 })
-    //   .then(res => this.setState({ post: res }));
+  handleLogout = () => {
+    this.setState(this.baseState)
   }
 
   handleLoginShow = () => {
@@ -38,15 +42,39 @@ class App extends Component {
     this.setState({ showLogin: false })
   }
 
+  handleRegisterShow = () => {
+    this.setState({ showRegister: true })
+  }
+
+  handleRegisterClose = () => {
+    this.setState({ showRegister: false })
+  }
+
   render() {
 
     return (
       <>
-        <NavBar handleShow={this.handleLoginShow} {...this.state} />
+        <NavBar
+          handleLoginShow={this.handleLoginShow}
+          handleRegisterShow={this.handleRegisterShow}
+          logout={this.handleLogout}
+          {...this.state}
+        />
+
         <Login
           showLogin={this.state.showLogin}
           handleShow={this.handleLoginShow}
           handleClose={this.handleLoginClose}
+          handleChange={this.handleChange}
+          handleRegisterShow={this.handleRegisterShow}
+        />
+
+        <Register
+          showRegister={this.state.showRegister}
+          handleShow={this.handleRegisterShow}
+          handleClose={this.handleRegisterClose}
+          handleChange={this.handleChange}
+          handleLoginShow={this.handleLoginShow}
         />
 
         <Router>
@@ -60,9 +88,9 @@ class App extends Component {
         </Router>
 
         <ToastContainer
-          autoClose={2000}
-          // hideProgressBar={true}
-          
+          autoClose={3000}
+          position="bottom-right"
+        // hideProgressBar={true}
         />
       </>
     );

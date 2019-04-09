@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown, Row, Image } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 
 class NavBar extends Component {
@@ -15,23 +15,24 @@ class NavBar extends Component {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ml-auto">
                             {username ?
-                                <NavDropdown title={username} id="nav-dropdown" className="dropdown-menu-right">
+                                <NavDropdown title={username} id="nav-dropdown" alignRight>
                                     <NavDropdown.Item onClick={() => toast.error("Not Supported Yet !")}>Account Settings</NavDropdown.Item>
                                     <NavDropdown.Divider />
-                                    <NavDropdown.Item eventKey="4.4">Sign out</NavDropdown.Item>
+                                    <NavDropdown.Item onClick={this.props.logout}>Sign out</NavDropdown.Item>
                                 </NavDropdown>
                                 :
                                 <>
-                                    <Nav.Link href="" onClick={this.props.handleShow}>Sign In</Nav.Link>
-                                    <Nav.Link href="/about">Join Now</Nav.Link>
+                                    <Nav.Link href="" onClick={this.props.handleLoginShow}>Sign In</Nav.Link>
+                                    <Nav.Link href="" onClick={this.props.handleRegisterShow}>Join Now</Nav.Link>
                                 </>
                             }
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
-                <div className="row" style={{ alignItems: 'center', justifyContent: 'center', padding: "30px", width: '100%' }}>
-                    <h2>Hackathon</h2>
-                </div>
+
+                <Row style={{ alignItems: 'center', justifyContent: 'center' }}>
+                    <Image src={require("../../images/hackathon.png")} width='30%' />
+                </Row>
 
                 <Navbar style={{ justifyContent: 'space-between' }} bg="dark" variant="dark" expand="sm">
                     <Navbar.Brand href="/"></Navbar.Brand>

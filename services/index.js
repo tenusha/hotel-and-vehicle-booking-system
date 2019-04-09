@@ -3,6 +3,7 @@
 const express = require('express');
 const app = express();
 const login = require('./routers/login');
+const register = require('./routers/register');
 
 app.use(express.json());
 app.use(function (req, res, next) {
@@ -12,6 +13,7 @@ app.use(function (req, res, next) {
 });
 
 app.use(login);
+app.use(register);
 
 app.listen(3001, err => {
     if (err) {
