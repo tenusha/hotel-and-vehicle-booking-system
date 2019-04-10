@@ -13,6 +13,7 @@ import Login from './components/Login'
 import Register from './components/Register'
 import Places from './components/Places'
 import Hotels from './components/Hotels'
+import AddPlace from './components/AddPlace'
 
 class App extends Component {
   constructor(props, context) {
@@ -98,6 +99,7 @@ class App extends Component {
               <Route path="/hotels" component={Hotels} />
               <Route path="/about" component={About} />
               <Route path="/contact" component={Contact} />
+              <Route path="/regitem" component={AddPlace} />
             </Switch>
           </Suspense>
         </Router>

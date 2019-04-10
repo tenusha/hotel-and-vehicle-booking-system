@@ -45,6 +45,7 @@ class NavBar extends Component {
                             <Nav.Link href="/hotels" >{'Hotels'}</Nav.Link>
                             <Nav.Link href="/about" >{'About Us'}</Nav.Link>
                             <Nav.Link href="/contact" >{'Contact Us'}</Nav.Link>
+                            {username && <Nav.Link href="/regitem" >{'Register Items'}</Nav.Link>}
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>

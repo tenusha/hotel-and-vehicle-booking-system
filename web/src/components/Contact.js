@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import AddPlace from './AddPlace';
 
 class Contact extends Component {
 

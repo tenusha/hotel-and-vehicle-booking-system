@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Row, Image } from 'react-bootstrap'
+import { Row, Image, Button } from 'react-bootstrap'
 
 class Search extends Component {
 
@@ -16,7 +16,7 @@ class Search extends Component {
                 </div>
                 <form className="row" style={{ width: '100%', alignItems: 'center', justifyContent: 'center', display: 'flex', position: 'absolute', top: 330 }}>
                     <input id="search" className="form-control" style={{ width: '70%', marginRight: 5, opacity:0.8 }} type="search" placeholder="Search for anything" aria-label="Search" />
-                    <button className="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+                    <Button href="/hotels" variant="primary">Search</Button>
                 </form>
             </Row>
         )

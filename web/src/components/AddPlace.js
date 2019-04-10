@@ -28,7 +28,8 @@ class AddPlace extends Component {
 	render() {
 		return(
 		<Container>
-			<center><h1>Register budget room/vehicle</h1><br/></center>
+			<br/>
+			<center><h1>Register Budget Rooms and Vehicles</h1><br/></center>
 			<Form>
 			  <Form.Row>
 				<Form.Group as={Col} controlId="formGridName">
