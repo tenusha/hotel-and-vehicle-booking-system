@@ -28,14 +28,14 @@ class Home extends Component {
                     </Col>
                     <Col xs={12} md={3}>
                         <Category
-                            src={require("../images/wildlife.png")}
-                            title="WildLife"
+                            src={require("../images/heritage.png")}
+                            title="Heritage"
                         />
                     </Col>
                     <Col xs={12} md={3}>
                         <Category
-                            src={require("../images/wildlife.png")}
-                            title="WildLife"
+                            src={require("../images/adventure.png")}
+                            title="Adventure"
                         />
                     </Col>
                 </Row>
