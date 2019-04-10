@@ -9,7 +9,7 @@ class ElementDisplay extends Component {
     }
 
     render() {
-console.log(this.props);
+
         return (
             <div>
                 <Image src={this.props.url} width='100%' height='100%' rounded/>
