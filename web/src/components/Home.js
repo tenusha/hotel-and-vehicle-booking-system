@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import Category from './Category'
+import { Row, Col, Container } from 'react-bootstrap'
 
 class Home extends Component {
 
@@ -9,7 +11,37 @@ class Home extends Component {
 
     render() {
         return (
-            <div>Home Page</div>
+            <Container>
+                <br />
+                <Row>
+                    <Col xs={6} md={3}>
+                        <Category
+                            src={require("../images/wildlife.png")}
+                            title="WildLife"
+                        />
+                    </Col>
+                    <Col xs={6} md={3}>
+                        <Category
+                            src={require("../images/festival.png")}
+                            title="Festivals"
+                        />
+                    </Col>
+                    <Col xs={6} md={3}>
+                        <Category
+                            src={require("../images/wildlife.png")}
+                            title="WildLife"
+                        />
+                    </Col>
+                    <Col xs={6} md={3}>
+                        <Category
+                            src={require("../images/wildlife.png")}
+                            title="WildLife"
+                        />
+                    </Col>
+                </Row>
+                <br />
+                <br />
+            </Container>
         );
     }
 }
