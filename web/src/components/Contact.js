@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Place from './Place';
+import AddPlace from './AddPlace';
 
 class Contact extends Component {
 
