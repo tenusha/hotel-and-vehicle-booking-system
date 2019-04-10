@@ -28,6 +28,10 @@
   ],
   "devDependencies": {
     "google-map-react": "^1.1.4",
+    "mdbreact": "^4.12.0",
+    "react-bootstrap-date-picker": "^5.1.0",
+    "react-datepicker": "^2.3.0",
+    "react-images-upload": "^1.2.6",
     "react-rating": "^1.6.2"
   }
 }
