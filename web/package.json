@@ -25,5 +25,9 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "google-map-react": "^1.1.4",
+    "react-rating": "^1.6.2"
+  }
 }
