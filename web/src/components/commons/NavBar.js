@@ -40,9 +40,11 @@ class NavBar extends Component {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav" data-collapsed="false">
                         <Nav className="mx-auto">
-                            <Nav.Link href="/">{'Home'}</Nav.Link>
-                            <Nav.Link href="/about">{'About Us'}</Nav.Link>
-                            <Nav.Link href="/contact">{'Contact Us'}</Nav.Link>
+                            <Nav.Link href="/" >{'Home'}</Nav.Link>
+                            <Nav.Link href="/places" >{'Places'}</Nav.Link>
+                            <Nav.Link href="/hotels" >{'Hotels'}</Nav.Link>
+                            <Nav.Link href="/about" >{'About Us'}</Nav.Link>
+                            <Nav.Link href="/contact" >{'Contact Us'}</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
