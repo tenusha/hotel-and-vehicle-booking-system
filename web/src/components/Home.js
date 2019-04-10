@@ -14,25 +14,25 @@ class Home extends Component {
             <Container>
                 <br />
                 <Row>
-                    <Col xs={6} md={3}>
+                    <Col xs={12} md={3}>
                         <Category
                             src={require("../images/wildlife.png")}
                             title="WildLife"
                         />
                     </Col>
-                    <Col xs={6} md={3}>
+                    <Col xs={12} md={3}>
                         <Category
                             src={require("../images/festival.png")}
                             title="Festivals"
                         />
                     </Col>
-                    <Col xs={6} md={3}>
+                    <Col xs={12} md={3}>
                         <Category
                             src={require("../images/wildlife.png")}
                             title="WildLife"
                         />
                     </Col>
-                    <Col xs={6} md={3}>
+                    <Col xs={12} md={3}>
                         <Category
                             src={require("../images/wildlife.png")}
                             title="WildLife"
