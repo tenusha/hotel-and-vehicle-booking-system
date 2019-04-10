@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import  Places from './Places';
+
 
 class About extends Component {
 
@@ -9,7 +11,9 @@ class About extends Component {
 
     render() {
         return (
-            <div>About Us Page</div>
+            <div>
+                <Places/>
+            </div>
         );
     }
 }
