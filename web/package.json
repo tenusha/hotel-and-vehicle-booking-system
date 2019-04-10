@@ -9,7 +9,8 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
-    "react-toastify": "^5.0.0-rc.6"
+    "react-toastify": "^5.0.0-rc.6",
+    "react-rating": "^1.6.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -25,9 +26,5 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "devDependencies": {
-    "google-map-react": "^1.1.4",
-    "react-rating": "^1.6.2"
-  }
+  ]
 }
