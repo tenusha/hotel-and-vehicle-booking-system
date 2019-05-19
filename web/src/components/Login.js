@@ -33,23 +33,25 @@ class Login extends Component {
         this.setState({ modalShowErr: false })
         const form = event.currentTarget
 
-        if (form.checkValidity() === true) {
-            login({ username: this.state.username, password: this.state.password })
-                .then(res => {
-                    this.props.handleChange(res)
-                    this.props.handleClose()
-                })
-                .catch(err => {
-                    console.log(err)
-                    this.setState({ modalShowErr: true })
-                })
-        }
+        this.props.handleChange({ username: 'Tenusha' })
+        this.props.handleClose()
+        // if (form.checkValidity() === true) {
+        //     login({ username: this.state.username, password: this.state.password })
+        //         .then(res => {
+        //             this.props.handleChange(res)
+        //             this.props.handleClose()
+        //         })
+        //         .catch(err => {
+        //             console.log(err)
+        //             this.setState({ modalShowErr: true })
+        //         })
+        // }
         //this.setState({ validated: true }) form tag -> noValidate validated={validated}
         event.preventDefault()
         event.stopPropagation()
     }
 
-    joinClick=()=>{
+    joinClick = () => {
         this.props.handleClose()
         this.props.handleRegisterShow()
     }

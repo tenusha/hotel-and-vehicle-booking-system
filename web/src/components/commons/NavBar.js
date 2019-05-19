@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
-import { Navbar, Nav, NavDropdown, Row, Image } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown, Image } from 'react-bootstrap';
 import { toast } from 'react-toastify';
+import Search from './Search';
 
 class NavBar extends Component {
 
@@ -10,7 +11,9 @@ class NavBar extends Component {
         return (
             <>
                 <Navbar bg="light" expand="sm">
-                    <Navbar.Brand href="/">Amazing Sri Lanka</Navbar.Brand>
+                    <Navbar.Brand href="/">
+                        <Image src={require("../../images/hackathon.png")} width='20%' />
+                    </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ml-auto">
@@ -30,17 +33,19 @@ class NavBar extends Component {
                     </Navbar.Collapse>
                 </Navbar>
 
-                <Row style={{ alignItems: 'center', justifyContent: 'center' }}>
-                    <Image src={require("../../images/hackathon.png")} width='30%' />
-                </Row>
+                <Search />
 
                 <Navbar style={{ justifyContent: 'space-between' }} bg="dark" variant="dark" expand="sm">
                     <Navbar.Brand href="/"></Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav" data-collapsed="false">
                         <Nav className="mx-auto">
-                            <Nav.Link href="/about">{'About Us'}</Nav.Link>
-                            <Nav.Link href="/contact">{'Conotact Us'}</Nav.Link>
+                            <Nav.Link href="/" >{'Home'}</Nav.Link>
+                            <Nav.Link href="/places" >{'Places'}</Nav.Link>
+                            <Nav.Link href="/hotels" >{'Hotels'}</Nav.Link>
+                            <Nav.Link href="/about" >{'About Us'}</Nav.Link>
+                            <Nav.Link href="/contact" >{'Contact Us'}</Nav.Link>
+                            {username && <Nav.Link href="/regitem" >{'Register Items'}</Nav.Link>}
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>

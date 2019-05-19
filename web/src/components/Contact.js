@@ -6,11 +6,11 @@ class Contact extends Component {
         super(props);
         this.state = {};
     }
-
+	
     render() {
         return (
-            <div>Contact Us Page</div>
-        );
+			<div>Contact Us</div>
+		);
     }
 }
 

@@ -11,6 +11,9 @@ import About from './components/About'
 import Contact from './components/Contact'
 import Login from './components/Login'
 import Register from './components/Register'
+import Places from './components/Places'
+import Hotels from './components/Hotels'
+import AddPlace from './components/AddPlace'
 
 class App extends Component {
   constructor(props, context) {
@@ -21,6 +24,11 @@ class App extends Component {
       showRegister: false,
       username: ""
     }
+
+    this.config = {
+      selected: 'home'
+    }
+
     this.baseState = this.state
   }
 
@@ -50,6 +58,11 @@ class App extends Component {
     this.setState({ showRegister: false })
   }
 
+  setSelectedComponent = component => {
+    this.config = { ...this.config, selected: component };
+    console.log(this.config.selected)
+  }
+
   render() {
 
     return (
@@ -58,6 +71,7 @@ class App extends Component {
           handleLoginShow={this.handleLoginShow}
           handleRegisterShow={this.handleRegisterShow}
           logout={this.handleLogout}
+          setSelectedComponent={(type) => this.setSelectedComponent(type)}
           {...this.state}
         />
 
@@ -81,8 +95,11 @@ class App extends Component {
           <Suspense fallback={<div>Loading...</div>}>
             <Switch>
               <Route exact path="/" component={Home} />
+              <Route path="/places" component={Places} />
+              <Route path="/hotels" component={Hotels} />
               <Route path="/about" component={About} />
               <Route path="/contact" component={Contact} />
+              <Route path="/regitem" component={AddPlace} />
             </Switch>
           </Suspense>
         </Router>
